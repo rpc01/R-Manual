@@ -62,7 +62,7 @@ library(timetk)
 remove.packages("tidyquant")
 library(tidyr)
 N     <- 252 # Number of Stock Price Simulations
-M     <- 250  # Number of Monte Carlo Simulations   
+M     <- 25  # Number of Monte Carlo Simulations   
 mu    <- mean_log_returns
 sigma <- sd_log_returns
 day <- 1:N
@@ -97,7 +97,7 @@ price_sim %>%
   ggtitle(paste0("MA: ", M, 
                 " Monte Carlo Simulations for Prices Over ", N, 
                 " Trading Days"))
-
-
-
+dim(price_sim)
+tail(price_sim)
+dim(monte_carlo_mat)
 
