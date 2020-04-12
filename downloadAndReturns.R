@@ -1,6 +1,8 @@
 ####
 # Download financial data and calculate returns
 ####
+library(quantmod)
+library(dplyr)
 from<-"2018-01-01"
 till<-"2020-04-09"
 getSymbols("GOOG",src="yahoo",from=from, to=till)%>%get() # from yahoo 
